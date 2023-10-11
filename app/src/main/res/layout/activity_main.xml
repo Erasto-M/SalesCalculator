@@ -312,6 +312,20 @@
                     android:text=""
                     android:textSize="16sp" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clear_button"
+                    android:text="Clear Sales"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
     </FrameLayout>
 </RelativeLayout>
