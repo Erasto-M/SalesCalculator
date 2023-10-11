@@ -80,7 +80,35 @@
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="85sp"
                     android:text="MILK"
+                    android:layout_marginRight="25dp"
                     android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/milk_price_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/milk_vat_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/milk_actual_price_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -91,7 +119,34 @@
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="86sp"
                     android:text="Sugar"
-                    android:layout_height="wrap_content" />
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content" /><TextView
+                android:id="@+id/sugar_price_textview"
+                android:layout_marginRight="10dp"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rectangle_shape"
+                android:text=""
+                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/sugar_vat_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/sugar_actual_price_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
 
                 <!-- Container for Prices (Empty TextView) -->
                 <TextView
@@ -112,8 +167,36 @@
                 android:layout_height="wrap_content">
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="85sp"
+                    android:layout_marginRight="25dp"
                     android:text="Flour"
                     android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/flour_price_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/flour_vat_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/flour_actual_price_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,12 +206,96 @@
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="86sp"
                     android:text="Bread"
+                    android:layout_marginRight="25dp"
                     android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/bread_price_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/bread_vat_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/bread_actual_price_textview"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:text="GRAND TOTAL"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/grand_total_textview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:text="DISCOUNT 15%"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/discount_textview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
 
-
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="154dp"
+                    android:text="NET PAY"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/net_pay_textview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_shape"
+                    android:text=""
+                    android:textSize="16sp" />
+            </LinearLayout>
         </LinearLayout>
     </FrameLayout>
 </RelativeLayout>
