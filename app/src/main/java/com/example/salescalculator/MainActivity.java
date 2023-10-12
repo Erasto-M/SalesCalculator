@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity {
                     milkPriceTextView.setText(String.format("%.2f", milkItemPrice));
                     milkVatTextView.setText(String.format("%.2f", milkItemVAT));
                     milkActualPriceTextView.setText(String.format("%.2f", milkCalcActualPrice));
-//                    grandTotal();
-//                    TotalDiscount();
-//                    netPayEarned();
+                    grandTotal();
+                    TotalDiscount();
+                    netPayEarned();
                 }
             }
         });
@@ -107,9 +107,9 @@ public class MainActivity extends AppCompatActivity {
                      sugarPriceTextView.setText(String.format("%.2f",sugarCalcPrice));
                      sugarVatTextView.setText(String.format("%.2f",sugarCalcVat));
                      sugarActualPriceTextView.setText(String.format("%.2f",sugarCalcActualPrice));
-//                     grandTotal();
-//                     TotalDiscount();
-//                     netPayEarned();
+                     grandTotal();
+                     TotalDiscount();
+                     netPayEarned();
                 }
             }
         });
@@ -126,9 +126,9 @@ public class MainActivity extends AppCompatActivity {
                     flourPriceTextView.setText(String.format("%.2f",flourCalcPrice));
                     flourVatTextView.setText(String.format("%.2f",flourCalcVat));
                     flourActualPriceTextView.setText(String.format("%.2f",flourCalcActualPrice));
-//                    grandTotal();
-//                    TotalDiscount();
-//                    netPayEarned();
+                    grandTotal();
+                    TotalDiscount();
+                    netPayEarned();
                 }
             }
         });
@@ -145,30 +145,30 @@ public class MainActivity extends AppCompatActivity {
                     breadPriceTextView.setText(String.format("%.2f",breadCalcPrice));
                     breadVatTextView.setText(String.format("%.2f",breadCalVat));
                     breadActualPriceTextView.setText(String.format("%.2f",breadCalcActualPrice));
-//                    grandTotal();
-//                    TotalDiscount();
-//                    netPayEarned();
+                    grandTotal();
+                    TotalDiscount();
+                    netPayEarned();
                 }
             }
         });
-        grandTotalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                grandTotal();
-            }
-        });
-        discountButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                TotalDiscount();
-            }
-        });
-        netpayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                netPayEarned();
-            }
-        });
+//        grandTotalButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                grandTotal();
+//            }
+//        });
+//        discountButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                TotalDiscount();
+//            }
+//        });
+//        netpayButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                netPayEarned();
+//            }
+//        });
         clearSalesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
