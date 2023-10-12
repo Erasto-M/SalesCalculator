@@ -6,15 +6,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    //calculated actualPrices
+    public  double flourCalcActualPrice;
+    public  double breadCalcActualPrice;
+    public  double sugarCalcActualPrice;
+    public  double milkCalcActualPrice;
+    //declaring counts
+    public double milkCount = 0;
+    public double sugarCount = 0;
+    public double flourCount = 0;
+    public double breadCount = 0;
     //declaring prices
-    public float milkPrice = 100;
-    public float sugarPrice = 100;
-    public float flourPrice = 500;
-    public float breadPrice = 200;
-    public  float vatValue = 16F/100;
-    public  float DiscountValue = 15F/100;
+    public double milkPrice = 900;
+    public double sugarPrice = 1000;
+    public double flourPrice = 1500;
+    public double breadPrice = 800;
+    public  double vatValue = 0.16;
+    public  double DiscountValue =0.15;
+    public  double grandTotal = 0;
+    public double netIncome =0;
+    public double discountAmount=0;
     // TextViews variable declaration
     TextView milkPriceTextView, milkVatTextView, milkActualPriceTextView;
     TextView sugarPriceTextView, sugarVatTextView, sugarActualPriceTextView;
@@ -58,29 +72,151 @@ public class MainActivity extends AppCompatActivity {
         discountButton= findViewById(R.id.discount_button);
         netpayButton = findViewById(R.id.netpay_button);
         clearSalesButton = findViewById(R.id.clear_button);
+        Button milkButton = findViewById(R.id.milk_button);
         milkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Check if milkCount is less than 4 before updating
+                if (milkCount < 4) {
+                    milkCount++;
+                    // Calculate price, VAT, and actual price
+                    double milkItemPrice = milkCount * milkPrice;
+                    double milkItemVAT = milkItemPrice * vatValue;
+                     milkCalcActualPrice = milkItemPrice + milkItemVAT;
 
+                    // Update UI elements
+                    milkPriceTextView.setText(String.format("%.2f", milkItemPrice));
+                    milkVatTextView.setText(String.format("%.2f", milkItemVAT));
+                    milkActualPriceTextView.setText(String.format("%.2f", milkCalcActualPrice));
+//                    grandTotal();
+//                    TotalDiscount();
+//                    netPayEarned();
+                }
             }
         });
         sugarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(sugarCount<4){
+                    sugarCount++;
+                    //calculate the price , Vat and actualPrice
+                    double sugarCalcPrice=sugarPrice *sugarCount;
+                    double sugarCalcVat = sugarCalcPrice * vatValue;
+                     sugarCalcActualPrice = sugarCalcPrice + sugarCalcVat;
+                    //display the price , vat and actualPrice in the textFields;
+                     sugarPriceTextView.setText(String.format("%.2f",sugarCalcPrice));
+                     sugarVatTextView.setText(String.format("%.2f",sugarCalcVat));
+                     sugarActualPriceTextView.setText(String.format("%.2f",sugarCalcActualPrice));
+//                     grandTotal();
+//                     TotalDiscount();
+//                     netPayEarned();
+                }
             }
         });
         flourButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(flourCount<4){
+                    flourCount++;
+                    //calculate the price , Vat and actualPrice
+                    double flourCalcPrice=flourPrice *flourCount;
+                    double flourCalcVat = flourCalcPrice * vatValue;
+                    flourCalcActualPrice = flourCalcPrice + flourCalcVat;
+                    //display the price , vat and actualPrice in the textfields;
+                    flourPriceTextView.setText(String.format("%.2f",flourCalcPrice));
+                    flourVatTextView.setText(String.format("%.2f",flourCalcVat));
+                    flourActualPriceTextView.setText(String.format("%.2f",flourCalcActualPrice));
+//                    grandTotal();
+//                    TotalDiscount();
+//                    netPayEarned();
+                }
             }
         });
         breadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(breadCount<4){
+                    breadCount++;
+                    //calculate the price , Vat and actualPrice
+                    double breadCalcPrice=breadCount * breadPrice;
+                    double breadCalVat = breadCalcPrice * vatValue;
+                    breadCalcActualPrice= breadCalcPrice + breadCalVat;
+                    //display the price , vat and actualPrice in the textfields;
+                    breadPriceTextView.setText(String.format("%.2f",breadCalcPrice));
+                    breadVatTextView.setText(String.format("%.2f",breadCalVat));
+                    breadActualPriceTextView.setText(String.format("%.2f",breadCalcActualPrice));
+//                    grandTotal();
+//                    TotalDiscount();
+//                    netPayEarned();
+                }
             }
         });
+        grandTotalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                grandTotal();
+            }
+        });
+        discountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TotalDiscount();
+            }
+        });
+        netpayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                netPayEarned();
+            }
+        });
+        clearSalesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearSales();
+            }
+        });
+    }
+
+    void grandTotal(){
+        grandTotal = breadCalcActualPrice + flourCalcActualPrice + milkCalcActualPrice + sugarCalcActualPrice;
+        grandTotalTextView.setText(String.format("%.2f",grandTotal));
+    }
+    void TotalDiscount(){
+        if(grandTotal<10000){
+            Toast.makeText(this, "No discount awarded", Toast.LENGTH_SHORT).show();
+        }else {
+            discountAmount = grandTotal * DiscountValue;
+            discountTextView.setText(String.format("%.2f",discountAmount));
+        }
+    }
+    void  netPayEarned(){
+        netIncome =  grandTotal- discountAmount;
+        netPayTextView.setText(String.format("%.2f",netIncome));
+    }
+    void clearSales(){
+        milkCount =0;
+        breadCount = 0;
+        sugarCount = 0;
+        flourCount = 0;
+        //milkTextViews
+        milkPriceTextView.setText("");
+        milkVatTextView.setText("");
+        milkActualPriceTextView.setText("");
+        //breadTextViews
+        breadPriceTextView.setText("");
+        breadVatTextView.setText("");
+        breadActualPriceTextView.setText("");
+        //sugarTextViews
+        sugarPriceTextView.setText("");
+        sugarVatTextView.setText("");
+        sugarActualPriceTextView.setText("");
+        //flourTextViews
+        flourPriceTextView.setText("");
+        flourVatTextView.setText("");
+        flourActualPriceTextView.setText("");
+        // grand , discount and netIncome textViews
+        grandTotalTextView.setText("");
+        netPayTextView.setText("");
+        discountTextView.setText("");
     }
 }
