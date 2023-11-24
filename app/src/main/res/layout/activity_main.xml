@@ -87,12 +87,12 @@
                     android:layout_width="85sp"
                     android:text="MILK"
                     android:id="@+id/milk_button"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="15dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
                     android:id="@+id/milk_price_textview"
-                    android:layout_width="50dp"
+                    android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"
@@ -101,8 +101,8 @@
                     android:textSize="16sp" />
                 <TextView
                     android:id="@+id/milk_vat_textview"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rectangle_shape"
@@ -111,7 +111,7 @@
 
                 <TextView
                     android:id="@+id/milk_actual_price_textview"
-                    android:layout_width="95dp"
+                    android:layout_width="85dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"
@@ -129,12 +129,12 @@
                     android:layout_width="86sp"
                     android:text="Sugar"
                     android:id="@+id/sugar_button"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="15dp"
                     android:layout_height="wrap_content" />
                 <TextView
                 android:id="@+id/sugar_price_textview"
-                android:layout_marginRight="10dp"
-                android:layout_width="50dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="60dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:background="@drawable/rectangle_shape"
@@ -142,8 +142,8 @@
                 android:textSize="16sp" />
                 <TextView
                     android:id="@+id/sugar_vat_textview"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rectangle_shape"
@@ -179,13 +179,13 @@
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="85sp"
                     android:id="@+id/flour_button"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="15dp"
                     android:text="Flour"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/flour_price_textview"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rectangle_shape"
@@ -193,8 +193,8 @@
                     android:textSize="16sp" />
                 <TextView
                     android:id="@+id/flour_vat_textview"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rectangle_shape"
@@ -219,12 +219,12 @@
                     android:layout_width="86sp"
                     android:text="Bread"
                     android:id="@+id/bread_button"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="15dp"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/bread_price_textview"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rectangle_shape"
@@ -232,8 +232,8 @@
                     android:textSize="16sp" />
                 <TextView
                     android:id="@+id/bread_vat_textview"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rectangle_shape"

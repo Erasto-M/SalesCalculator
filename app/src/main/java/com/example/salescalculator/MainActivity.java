@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
 //                    grandTotal();
 //                    TotalDiscount();
 //                    netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase Milk 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -110,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
 //                     grandTotal();
 //                     TotalDiscount();
 //                     netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase sugar 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -129,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
 //                    grandTotal();
 //                    TotalDiscount();
 //                    netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase flour 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -148,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
 //                    grandTotal();
 //                    TotalDiscount();
 //                    netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase bread 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -198,7 +206,13 @@ public class MainActivity extends AppCompatActivity {
         breadCount = 0;
         sugarCount = 0;
         flourCount = 0;
+        //reset the text views
+        milkCalcActualPrice = 0;
+        breadCalcActualPrice = 0;
+        sugarCalcActualPrice = 0;
+        flourCalcActualPrice = 0;
         //milkTextViews
+
         milkPriceTextView.setText("");
         milkVatTextView.setText("");
         milkActualPriceTextView.setText("");
@@ -215,6 +229,10 @@ public class MainActivity extends AppCompatActivity {
         flourVatTextView.setText("");
         flourActualPriceTextView.setText("");
         // grand , discount and netIncome textViews
+        // Reset grandTotal, netIncome, and discountAmount
+        grandTotal = 0;
+        netIncome = 0;
+        discountAmount = 0;
         grandTotalTextView.setText("");
         netPayTextView.setText("");
         discountTextView.setText("");
