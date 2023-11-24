@@ -88,9 +88,11 @@ public class MainActivity extends AppCompatActivity {
                     milkPriceTextView.setText(String.format("%.2f", milkItemPrice));
                     milkVatTextView.setText(String.format("%.2f", milkItemVAT));
                     milkActualPriceTextView.setText(String.format("%.2f", milkCalcActualPrice));
-                    grandTotal();
-                    TotalDiscount();
-                    netPayEarned();
+//                    grandTotal();
+//                    TotalDiscount();
+//                    netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase Milk 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -107,9 +109,11 @@ public class MainActivity extends AppCompatActivity {
                      sugarPriceTextView.setText(String.format("%.2f",sugarCalcPrice));
                      sugarVatTextView.setText(String.format("%.2f",sugarCalcVat));
                      sugarActualPriceTextView.setText(String.format("%.2f",sugarCalcActualPrice));
-                     grandTotal();
-                     TotalDiscount();
-                     netPayEarned();
+//                     grandTotal();
+//                     TotalDiscount();
+//                     netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase sugar 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -126,9 +130,11 @@ public class MainActivity extends AppCompatActivity {
                     flourPriceTextView.setText(String.format("%.2f",flourCalcPrice));
                     flourVatTextView.setText(String.format("%.2f",flourCalcVat));
                     flourActualPriceTextView.setText(String.format("%.2f",flourCalcActualPrice));
-                    grandTotal();
-                    TotalDiscount();
-                    netPayEarned();
+//                    grandTotal();
+//                    TotalDiscount();
+//                    netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase flour 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -145,30 +151,32 @@ public class MainActivity extends AppCompatActivity {
                     breadPriceTextView.setText(String.format("%.2f",breadCalcPrice));
                     breadVatTextView.setText(String.format("%.2f",breadCalVat));
                     breadActualPriceTextView.setText(String.format("%.2f",breadCalcActualPrice));
-                    grandTotal();
-                    TotalDiscount();
-                    netPayEarned();
+//                    grandTotal();
+//                    TotalDiscount();
+//                    netPayEarned();
+                }else {
+                    Toast.makeText(MainActivity.this, "Can only purchase bread 4 times", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-//        grandTotalButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                grandTotal();
-//            }
-//        });
-//        discountButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                TotalDiscount();
-//            }
-//        });
-//        netpayButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                netPayEarned();
-//            }
-//        });
+        grandTotalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                grandTotal();
+            }
+        });
+        discountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TotalDiscount();
+            }
+        });
+        netpayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                netPayEarned();
+            }
+        });
         clearSalesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -198,7 +206,13 @@ public class MainActivity extends AppCompatActivity {
         breadCount = 0;
         sugarCount = 0;
         flourCount = 0;
+        //reset the text views
+        milkCalcActualPrice = 0;
+        breadCalcActualPrice = 0;
+        sugarCalcActualPrice = 0;
+        flourCalcActualPrice = 0;
         //milkTextViews
+
         milkPriceTextView.setText("");
         milkVatTextView.setText("");
         milkActualPriceTextView.setText("");
@@ -215,6 +229,10 @@ public class MainActivity extends AppCompatActivity {
         flourVatTextView.setText("");
         flourActualPriceTextView.setText("");
         // grand , discount and netIncome textViews
+        // Reset grandTotal, netIncome, and discountAmount
+        grandTotal = 0;
+        netIncome = 0;
+        discountAmount = 0;
         grandTotalTextView.setText("");
         netPayTextView.setText("");
         discountTextView.setText("");
